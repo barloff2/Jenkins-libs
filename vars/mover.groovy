@@ -5,13 +5,13 @@ import java.nio.file.Path
 import java.nio.file.StandardCopyOption
 
 def moverArchivo(){
-    Path origenPath = FileSystems.default.getPath("/home/stiven/Escritorio/prueba/jenkins/archivo1.txt")
-    Path destinoPath = FileSystems.default.getPath("/home/stiven/Escritorio/archivo1.txt")
+    shh Path origenPath = FileSystems.default.getPath("/home/stiven/Escritorio/prueba/jenkins/archivo1.txt")
+    shh Path destinoPath = FileSystems.default.getPath("/home/stiven/Escritorio/archivo1.txt")
     
     try {
-       Files.move(origenPath, destinoPath, StandardCopyOption.REPLACE_EXISTING)
-       echo 'moviendo archivo'
+       shh Files.move(origenPath, destinoPath, StandardCopyOption.REPLACE_EXISTING)
+       shh echo 'moviendo archivo'
     }catch (IOException e) {
-        echo e.message
+        shh echo e.message
     }
 }
