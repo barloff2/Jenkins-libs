@@ -3,7 +3,7 @@ import java.nio.file.FileSystems
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
-import hudson.util.jenkins
+import jenkins.model.Jenkins
 import hudson.util.RemotingDiagnostics
 
 def moverArchivo(){
