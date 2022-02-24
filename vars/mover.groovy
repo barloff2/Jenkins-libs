@@ -3,6 +3,8 @@ import java.nio.file.FileSystems
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
+import hudson.util.jenkins
+import hudson.util.RemotingDiagnostics
 
 def moverArchivo(){
     Path origenPath = FileSystems.default.getPath("/home/stiven/Escritorio/prueba/jenkins/archivo1.txt")
