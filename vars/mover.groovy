@@ -1,3 +1,5 @@
 def saludar{
-    echo "/home/stiven/scripts/script.sh" 
+    echo 'Hola buenas tardes'
 }
+
+return this
