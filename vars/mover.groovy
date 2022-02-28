@@ -15,5 +15,5 @@ def clonar(){
 def mover(){
     def destinoDir = "/home/stiven/Documentos/pagina"
     sh "mkdir ${destinoDir}"
-    sh "cp -r ${origenDir} ${ruta}"
+    sh "cp -r ${ruta} ${destinoDir}"
 }
