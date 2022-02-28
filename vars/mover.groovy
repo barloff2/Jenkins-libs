@@ -13,7 +13,7 @@ def clonar(){
 }
 
 def mover(def numero){
-    def destinoDir = "/home/stiven/Documentos/pagina${numero}"
+    String destinoDir = "/home/stiven/Documentos/pagina${numero}"
     sh "mkdir ${destinoDir}"
     sh "cp -r ${ruta} ${destinoDir}"
 }
