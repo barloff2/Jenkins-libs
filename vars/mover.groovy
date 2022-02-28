@@ -1,8 +1,7 @@
 String ruta = "/home/stiven/Escritorio/prueba/intento"
-String numeroPrueba = ${BUILD_NUMBER}
 
-def crearDir(){
-    ruta = "/home/stiven/Escritorio/prueba/intento${numeroPrueba}"
+def crearDir(def numero){
+    ruta = "/home/stiven/Escritorio/prueba/intento${numero}"
     sh "mkdir ${ruta}"
 }
 
