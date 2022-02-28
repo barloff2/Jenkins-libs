@@ -12,8 +12,8 @@ def clonar(){
     sh "git clone ${clonar} ${directorio}"
 }
 
-def mover(){
-    def destinoDir = "/home/stiven/Documentos/pagina"
+def mover(def numero){
+    def destinoDir = "/home/stiven/Documentos/pagina${numero}"
     sh "mkdir ${destinoDir}"
     sh "cp -r ${ruta} ${destinoDir}"
 }
