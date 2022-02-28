@@ -1,5 +1,5 @@
 def crearDir(String nombreDir){
-    def ruta = "home/stiven/Escritorio/prueba/intento${nombreDir}"
+    def ruta = "/home/stiven/Escritorio/prueba/intento${nombreDir}"
     sh "mkdir ${ruta}"
 }
 
