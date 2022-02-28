@@ -7,8 +7,8 @@ def crearDir(def numero){
 
 
 def clonar(){
-    def clonar = "https://github.com/barloff2/jenkins.git"
-    def directorio = ${ruta}
+    String clonar = "https://github.com/barloff2/jenkins.git"
+    String directorio = ${ruta}
     sh "git clone ${clonar} ${directorio}"
 }
 
