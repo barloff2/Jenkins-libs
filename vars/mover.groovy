@@ -1,4 +1,4 @@
-def saludar{
+def saludar(){
     echo 'Hola buenas tardes'
 }
 
