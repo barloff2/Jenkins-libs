@@ -1,5 +1,5 @@
 def crearDir(String nombreDir){
-    def ruta = "home/stiven/Escritorio/prueba/${nombreDir}"
+    def ruta = "home/stiven/Escritorio/prueba/intento${nombreDir}"
     sh "mkdir ${ruta}"
 }
 
@@ -11,8 +11,8 @@ def clonar(){
 }
 
 def mover(){
-    def nuevoDir = "mkdir /home/stiven/Documentos/pagina"
-    def copiar = "cp -r home/stiven/Escritorio/prueba/${nombreDir} /home/stiven/Documentos/pagina"
-    sh ${nuevoDir}
-    sh ${copiar}
+    def destinoDir = "/home/stiven/Documentos/pagina"
+    def origenDir = "home/stiven/Escritorio/prueba/intento${nombreDir}/"
+    sh "mkdir ${destinoDir}"
+    sh "cp -r ${origenDir} ${destinoDir}"
 }
