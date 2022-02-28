@@ -1,7 +1,7 @@
 def clonar(){
-    def clonar = "git branch: 'main', url: 'https://github.com/barloff2/jenkins.git'"
+    def clonar = "https://github.com/barloff2/jenkins.git"
     def directorio = "/home/stiven/Escritorio/prueba/pruebaCop"
-    sh ${clonar} ${directorio}
+    sh "git clone ${clonar} ${directorio}"
 }
 
 def mover(){
