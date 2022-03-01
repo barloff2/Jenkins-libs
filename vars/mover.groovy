@@ -1,19 +1,18 @@
-String ruta = "/home/stiven/Escritorio/prueba/intento"
+String ruta = "/c/Users/Stiven/documents/repo/despliguePrueba"
 
-def crearDir(def numero){
-    ruta = "/home/stiven/Escritorio/prueba/intento${numero}"
-    sh "mkdir ${ruta}"
+def crearDir(){
+    ruta = "/home/stiven/Escritorio/prueba/intento"
+    sh "mkdir ${ruta} || true"
 }
 
 
 def clonar(){
     String clonar = "https://github.com/barloff2/jenkins.git"
-    String directorio = ruta
-    sh "git clone ${clonar} ${directorio}"
+    sh "git clone ${clonar} ${ruta}"
 }
 
-def mover(def numero){
-    String destinoDir = "/home/stiven/Documentos/pagina${numero}"
+def mover(){
+    String destinoDir = "/e/pagina"
     sh "mkdir ${destinoDir} || true"
     sh "mv ${ruta} ${destinoDir}"
 }
