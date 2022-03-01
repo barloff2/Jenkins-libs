@@ -1,3 +1,3 @@
 def saludar(){
-    bat echo 'hola buenas tardes'
+    echo 'hola buenas tardes'
 }
