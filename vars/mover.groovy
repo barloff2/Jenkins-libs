@@ -1,5 +1,5 @@
-String ruta = "C:\Users\Stiven\Documents\repo\desPrueba"
-String destinoDir = "E:\pagina"
+String ruta = "C:/Users/Stiven/Documents/repo/desPrueba"
+String destinoDir = "E:/pagina"
 def crearDir(){
     bat "MD ${ruta} || true"
 }
