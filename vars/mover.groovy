@@ -14,6 +14,6 @@ def clonar(){
 
 def mover(def numero){
     String destinoDir = "/home/stiven/Documentos/pagina${numero}"
-    sh "mkdir ${destinoDir}"
+    sh "mkdir ${destinoDir} || true"
     sh "mv ${ruta} ${destinoDir}"
 }
