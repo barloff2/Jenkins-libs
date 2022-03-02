@@ -9,5 +9,12 @@ pipeline {
                 }
             }
         }
+        stage('mover'){
+            steps{
+                script{
+                    mover.moverCarpeta()
+                }
+            }
+        }
     }
 }
