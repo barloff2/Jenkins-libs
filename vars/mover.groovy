@@ -1,5 +1,5 @@
-String rutaClonacion = "C:/Users/Stiven/Documents/repo/${BUILD_TAG}"
-String rutaDestino = "C:/destino"
+def rutaClonacion = "C:/Users/Stiven/Documents/repo/${BUILD_TAG}"
+def rutaDestino = "C:/destino"
 def crearDirectorio(){
     powershell "New-Item C:/destino -itemType Directory"
     powershell "New-Item ${rutaClonacion} -itemType Directory"
