@@ -1,6 +1,6 @@
 
 def crearDirectorio(){
-    powershell "New-Item "C:\Users\Stiven\Documents\repo\prueba" -itemType Directory"
+    powershell "New-Item "C:/Users/Stiven/Documents/repo/prueba" -itemType Directory"
 }
 
 def clonandoProyecto(){
