@@ -1,6 +1,7 @@
 def crearDirectorio(){
-    def crear = "MD C:/Users/Stiven/Documents/repo/${JOB_NAME}"
+    boolean exite = false
     bat """
-        if EXIST C:/Users/Stiven/Documents/repo/${JOB_NAME} (echo La carpeta ya existe, Continuemos) ELSE ${crear}
+        if EXIST C:/Users/Stiven/Documents/repo/${JOB_NAME} (${!existe})
+        echo ${exite}
     """
 }
