@@ -6,7 +6,6 @@ pipeline {
             steps{
                 script{
                     mover.crearDirectorio()
-                    echo 'termino creacion carpetas'
                 }
             }
         }

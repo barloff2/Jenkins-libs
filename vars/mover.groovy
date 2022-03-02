@@ -1,7 +1,7 @@
-def saludo = "hola"
+def saludo = "hola buenas tardes"
 def crearDirectorio(){
     //powershell "New-Item C:/Users/Stiven/Documents/repo/${BUILD_TAG} -itemType Directory"
-    powershell "Write-Host ${saludo}"
+    powershell "echo ${saludo}"
 }
 
 def clonandoProyecto(){
