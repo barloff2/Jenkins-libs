@@ -1,5 +1,5 @@
 def crearDirectorio(){
-    boolean exite = false
+    def exite = false
     bat """
         if EXIST C:/Users/Stiven/Documents/repo/${JOB_NAME} (${!existe})
         echo ${exite}
