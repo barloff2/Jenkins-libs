@@ -1,4 +1,4 @@
-ruta = "C:/Users/Stiven/Documents/repo/${BUILD_TAG}"
+String ruta = "hola"
 
 def saludar(){
     echo ruta
