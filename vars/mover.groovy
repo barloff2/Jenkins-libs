@@ -1,7 +1,12 @@
-import groovy.transform.Field
+def crearDirectorio(){
+    powershell "New-Item C:/destino -itemType Directory"
+    powershell "New-Item  -itemType Directory"
+}
 
-String ruta = "hola"
+def clonandoProyecto(){
+     powershell "git clone -b test https://github.com/barloff2/jenkins.git C:/Users/Stiven/Documents/repo/${BUILD_TAG}"
+}
 
-def saludar(){
-    echo ruta
+def moverCarpeta(){
+    powershell "Move-Item -Path C:/Users/Stiven/Documents/repo/${BUILD_TAG} -Destination C:/destino"
 }
