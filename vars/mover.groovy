@@ -3,5 +3,5 @@ def crearDirectorio(){
 }
 
 def clonandoProyecto(){
-    bat "git clone https://github.com/barloff2/jenkins.git C:/Users/Stiven/Documents/repo/${JOB_NAME}"
+     "git branch: 'test', url: 'https://github.com/barloff2/jenkins.git'"
 }
