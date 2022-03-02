@@ -4,5 +4,5 @@ def crearDirectorio(){
 }
 
 def clonandoProyecto(){
-     "git branch: 'test', url: 'https://github.com/barloff2/jenkins.git'"
+     git "git branch: 'test', url: 'https://github.com/barloff2/jenkins.git'"
 }
