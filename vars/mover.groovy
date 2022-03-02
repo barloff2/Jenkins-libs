@@ -1,13 +1,13 @@
 
 def crearDirectorio(){
     powershell "New-Item C:/destino -itemType Directory"
-    powershell "New-Item C:/Users/Stiven/Documents/repo/prueba -itemType Directory"
+    powershell "New-Item C:/Users/Stiven/Documents/repo/${BUILD_TAG} -itemType Directory"
 }
 
 def clonandoProyecto(){
-     powershell "git clone -b test https://github.com/barloff2/jenkins.git C:/Users/Stiven/Documents/repo/prueba"
+     powershell "git clone -b test https://github.com/barloff2/jenkins.git C:/Users/Stiven/Documents/repo/${BUILD_TAG}"
 }
 
 def moverCarpeta(){
-    powershell "Move-Item -Path C:/Users/Stiven/Documents/repo/prueba -Destination C:/destino"
+    powershell "Move-Item -Path C:/Users/Stiven/Documents/repo/${BUILD_TAG} -Destination C:/destino"
 }
