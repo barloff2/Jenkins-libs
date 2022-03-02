@@ -1,3 +1,3 @@
 def saludar(){
-    echo 'hola buenas tardes'
+    bat "C:\Users\Stiven\Documents\prueba.bat"
 }
