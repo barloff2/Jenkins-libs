@@ -5,7 +5,7 @@ pipeline {
         stage('crear'){
             steps{
                 script{
-                    mover.crearDirectorio()
+                   bat mover.crearDirectorio()
                 }
             }
         }
