@@ -1,5 +1,5 @@
+saludo = "hola"
 def crearDirectorio(){
-    saludo = "hola"
     //powershell "New-Item C:/Users/Stiven/Documents/repo/${BUILD_TAG} -itemType Directory"
     bat "echo ${saludo}"
 }
