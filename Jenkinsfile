@@ -10,21 +10,5 @@ pipeline {
                 }
             }
         }
-        stage('clonar'){
-            steps{
-                script{
-                    mover.clonandoProyecto()
-                    echo 'termino clonacion'
-                } 
-            }
-        }
-        stage('mover'){
-            steps{
-                script{
-                    mover.moverCarpeta()
-                    echo 'moviendo carpeta'
-                }
-            }
-        }
     }
 }
