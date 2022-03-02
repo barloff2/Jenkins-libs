@@ -1,6 +1,5 @@
 def crearDirectorio(){
-    powershell "New-Item C:/destino -itemType Directory"
-    powershell "New-Item  -itemType Directory"
+    powershell "New-Item C:/Users/Stiven/Documents/repo/${BUILD_TAG} -itemType Directory"
 }
 
 def clonandoProyecto(){
