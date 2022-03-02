@@ -1,6 +1,6 @@
 def crearDirectorio(){
     //powershell "New-Item C:/Users/Stiven/Documents/repo/${BUILD_TAG} -itemType Directory"
-    sh "echo ${workspace}"
+    powershell "echo ${workspace}"
 }
 
 def clonandoProyecto(){
