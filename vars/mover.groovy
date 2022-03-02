@@ -1,5 +1,5 @@
 def crearDirectorio(){
     bat """
-        MD "C:/Users/Stiven/Documents/repo/${JOB_NAME}" 
+        if C:/Users/Stiven/Documents/repo/${JOB_NAME} (echo exite) ELSE (echo no existe)
     """
 }
