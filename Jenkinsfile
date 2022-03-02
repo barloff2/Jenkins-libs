@@ -2,10 +2,10 @@
 pipeline {
     agent any
     stages {
-        stage('crear'){
+        stage('clonar'){
             steps{
                 script{
-                   mover.crearDirectorio()
+                   mover.clonandoProyecto()
                 }
             }
         }
