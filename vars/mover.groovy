@@ -1,5 +1,3 @@
 def crearDirectorio(){
-    bat """
-        MD C:/Users/Stiven/Documents/repo/${BUILD_TAG}
-    """
+    bat "IF EXIST C:\Users\Stiven\Documents\repo\prueba (echo carpeta existente) ELSE (MD C:\Users\Stiven\Documents\repo\prueba)"
 }
