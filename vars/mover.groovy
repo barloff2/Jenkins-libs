@@ -2,7 +2,7 @@ def clonandoProyecto(){
     ruta = "${workspace}/${BUILD_TAG}"
     powershell """
         echo 'creando carpeta'
-        New-Item ${workspace}/${BUILD_TAG} -itemType Directory
+        New-Item ${ruta} -itemType Directory
         git clone -b test https://github.com/barloff2/jenkins.git ${workspace}
 
     """
@@ -10,5 +10,5 @@ def clonandoProyecto(){
 
 def moverCarpeta(){
 
-    powershell "Move-Item -Path ${workspace}/${BUILD_TAG} -Destination C:/destino"
+    powershell "Move-Item -Path ${ruta} -Destination C:/destino"
 }
