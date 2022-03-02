@@ -9,6 +9,5 @@ def clonandoProyecto(){
 }
 
 def moverCarpeta(){
-    powershell "Move-Item -Path C:/Users/Stiven/Documents/repo/prueba -Destination C:/destino
-"
+    powershell "Move-Item -Path C:/Users/Stiven/Documents/repo/prueba -Destination C:/destino"
 }
