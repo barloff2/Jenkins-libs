@@ -1,6 +1,6 @@
 
 def crearDirectorio(){
-    bat "MD C:/Users/Stiven/Documents/repo/${JOB_NAME}"
+    bat 'mkdir C:/Usuarios/stiven/documentos/repo/prueba'
 }
 
 def clonandoProyecto(){
