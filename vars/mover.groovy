@@ -4,5 +4,5 @@ def crearDirectorio(){
 }
 
 def clonandoProyecto(){
-     powershell "git clone -b test https://github.com/barloff2/jenkins.git"
+     powershell "git clone -b test https://github.com/barloff2/jenkins.git C:/Users/Stiven/Documents/repo/prueba"
 }
