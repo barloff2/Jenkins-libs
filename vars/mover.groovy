@@ -11,6 +11,6 @@ def clonandoProyecto(){
 def moverCarpeta(){
     powershell """
         echo 'Moviendo carpeta a destino'
-        Move-Item -Path ${workspace} -Destination C:/destino/${BUILD_TAG}
+        Move-Item -Path ${workspace}/* -Destination C:/destino/${BUILD_TAG}/
     """
 }
