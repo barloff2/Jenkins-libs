@@ -1,5 +1,5 @@
 def clonandoProyecto(){
-    rutaClon = "${workspace}/${BUILD_TAG}"
+    ruta = "${workspace}/${BUILD_TAG}"
     powershell"""
         echo 'creando carpeta para guardar los archivos...'
         New-Item ${ruta} -itemType Directory
