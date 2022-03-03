@@ -1,3 +1,5 @@
+def saludo ="hola"
+
 def clonandoProyecto(){
     ruta = "${workspace}/${BUILD_TAG}"
     powershell"""
