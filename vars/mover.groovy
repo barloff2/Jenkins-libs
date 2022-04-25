@@ -15,8 +15,8 @@ void findFiles(){
     }
     println files.length + ' Archivos encontrados'
     files.each{ file -> 
-        if (!file.path.matches(/.*\.jsp/)){
-            println file.path.matches(/.*\.js/)
+        if (!file.path.matches(/.*\.js/)){
+            println "C:\\destino\\${BUILD_TAG}\\${file}"
             "Remove-item C:\\destino\\${BUILD_TAG}\\${file}"
         }
     }
