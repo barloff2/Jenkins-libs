@@ -16,6 +16,7 @@ void findFiles(){
     println files.length + ' Archivos encontrados'
     files.each{ file -> 
         if (!file.path.matches(/.*\.js/)){
+            println 'Eliminando '+file.name
             powershell "Remove-Item C:\\destino\\${BUILD_TAG}\\${file}"
         }
     }
