@@ -10,12 +10,18 @@ void moverCarpeta(){
 
 void findFiles(){
     def files
+    def directory
     dir("C:\\destino\\${BUILD_TAG}\\"){
         files = findFiles(glob: "**/*")
     }
     println files.length + ' Archivos encontrados'
     files.each{ file -> 
-        println file.directory
+        println 'Imprimiendo .Directory' + file.directory
+        println 'Imprimiendo .path' + file.path
+        println 'Imprimiendo .name' + file.name
+        println 'Imprimiendo file' + file
+        directory = file.replace(file.name, "")
+        println 'Imprimiendo Directorio' + directory
         if (!file.path.matches(/.*\.js/)){
             println 'Eliminando '+file.name
             powershell "Remove-Item C:\\destino\\${BUILD_TAG}\\${file}"
