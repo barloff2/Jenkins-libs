@@ -25,7 +25,7 @@ void findFiles(){
             powershell "New-Item ${destination}${directory} -Type Directory"
         }
         println 'copiando '+file.name
-        powershell "Copy-Item C:\\destino\\${workspace}\\${file} -Destination ${destination}${file}"
+        powershell "Copy-Item ${workspace}\\${file} -Destination ${destination}${file}"
     }
 
 }
