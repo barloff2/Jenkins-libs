@@ -21,7 +21,7 @@ void findFiles(){
         println 'Imprimiendo .name ' + file.name
         println 'Imprimiendo file ' + file
         String name = file.name
-        directory = file.replace(name, "")
+        directory = file.replace(/${name}/, "")
         println 'Imprimiendo Directorio' + directory
         if (!file.path.matches(/.*\.js/)){
             println 'Eliminando '+file.name
