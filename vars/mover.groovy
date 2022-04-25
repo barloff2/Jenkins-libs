@@ -14,7 +14,7 @@ void findFiles(){
         files = findFiles(glob: "**/*")
     }
     println files.length + ' Archivos encontrados'
-    String regex = "**/*.jsp"
+    String regex = "**\\*.jsp"
     files.each{ file -> 
         if (!file.path.matches(regex)){
             "Remove-item ${file}"
