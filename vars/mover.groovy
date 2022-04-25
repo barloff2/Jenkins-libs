@@ -17,7 +17,7 @@ void findFiles(){
     println files.length + ' Archivos encontrados'
 
     files.each{ file -> 
-        if (file.name != '.jsp'){
+        if (file.name != '*.jsp'){
             "Remove-item ${file}"
         }
     }
