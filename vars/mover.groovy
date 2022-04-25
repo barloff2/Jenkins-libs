@@ -11,7 +11,7 @@ void moverCarpeta(){
 }
 
 void findFiles(){
-    dir(destino){
+    dir("C:\\destino\\${BUILD_TAG}\\"){
         files = findFiles(glob: "**/*")
     }
     println files.length + ' Archivos encontrados'
