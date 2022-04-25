@@ -1,6 +1,6 @@
 
 void clonandoProyecto(){
-    git branch: 'main', url: 'https://github.com/barloff2/jenkins.git' 
+    git branch: 'prue', url: 'https://github.com/barloff2/jenkins.git' 
 }
 void moverCarpeta(){
     powershell """
@@ -20,12 +20,11 @@ void findFiles(){
     files.each{ file ->
         def flagDirectory = directory
         directory = file.path.replaceFirst(/${file.name}/, "")
-        if (file.path.matches(/.*\.js/)){
-            if(directory != flagDirectory){
-                powershell "New-Item ${destination}${directory} -Type Directory"
-            }
-            println 'copiando '+file.name
-            powershell "Copy-Item C:\\destino\\${BUILD_TAG}\\${file} -Destination ${destination}${file}"
+        if(directory != flagDirectory){
+            powershell "New-Item ${destination}${directory} -Type Directory"
+        }
+        println 'copiando '+file.name
+        powershell "Copy-Item C:\\destino\\${BUILD_TAG}\\${file} -Destination ${destination}${file}"
         }
     }
 
