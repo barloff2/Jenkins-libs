@@ -18,7 +18,7 @@ void findFiles(){
 
     files.each{ file -> 
         if (file.name != '.jsp'){
-            "Remove-item ${destino}"
+            "Remove-item ${file}"
         }
     }
 }
