@@ -1,3 +1,4 @@
+def destination = "C:\\Users\\Stiven\\Documents\\prueba\\"
 void clonandoProyecto(){
     git branch: 'main', url: 'https://github.com/barloff2/jenkins.git' 
 }
@@ -15,16 +16,15 @@ void findFiles(){
         files = findFiles(glob: "**/*")
     }
     println files.length + ' Archivos encontrados'
-    files.each{ file -> 
-        println 'Imprimiendo .Directory ' + file.directory
-        println 'Imprimiendo .path ' + file.path
-        println 'Imprimiendo .name ' + file.name
-        println 'Imprimiendo file ' + file
+    files.each{ file ->
+        def flagDirectory = directory
         directory = file.path.replaceFirst(/${file.name}/, "")
-        println 'Imprimiendo Directorio' + directory
-        if (!file.path.matches(/.*\.js/)){
-            println 'Eliminando '+file.name
-            powershell "Remove-Item C:\\destino\\${BUILD_TAG}\\${file}"
+        if(directory != flagDirectory){
+            powershell "New-Item ${destination}${directory} -Type Directory"
+        }
+        if (file.path.matches(/.*\.js/)){
+            println 'copiando '+file.name
+            powershell "Copy-Item C:\\destino\\${BUILD_TAG}\\${file} -Destination ${destination}${file}"
         }
     }
 
