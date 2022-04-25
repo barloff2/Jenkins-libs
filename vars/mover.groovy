@@ -16,7 +16,8 @@ void findFiles(){
     println files.length + ' Archivos encontrados'
     files.each{ file -> 
         if (!file.path.matches(/.*\.jsp/)){
-            "Remove-item ${file}"
+            println 'entra aca?'
+            "Remove-item -Path C:\\destino\\${BUILD_TAG}\\${file}"
         }
     }
 }
