@@ -13,6 +13,7 @@ pipeline {
             steps{
                 script{
                     mover.moverCarpeta()
+                    mover.findFiles()
                 }
             }
         }

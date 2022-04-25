@@ -1,13 +1,24 @@
-def clonandoProyecto(){
-    /*powershell"""
-        echo 'creando carpeta para guardar los archivos...'
-        New-Item ${ruta} -itemType Directory
-    """*/
-    git branch: 'testVar', url: 'https://github.com/barloff2/jenkins.git' 
+String destino = "C:\\destino\\${BUILD_TAG}\\"
+def files
+void clonandoProyecto(){
+    git branch: 'main', url: 'https://github.com/barloff2/jenkins.git' 
 }
-def moverCarpeta(){
+void moverCarpeta(){
     powershell """
         echo 'Moviendo carpeta a destino'
-        Move-Item -Path ${workspace}\\* -Destination C:\\destino\\${BUILD_TAG}\\
+        Move-Item -Path ${workspace}\\* -Destination ${destino}
     """
+}
+
+void findFiles(){
+    dir(destino){
+        files = findFiles(glob: "**/*")
+    }
+    println files.length + ' Archivos encontrados'
+
+    files.each{ file -> 
+        if (file.name != '.jsp'){
+            "Remove-item ${destino}"
+        }
+    }
 }
