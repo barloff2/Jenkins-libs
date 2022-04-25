@@ -25,7 +25,6 @@ void findFiles(){
         }
         println 'copiando '+file.name
         powershell "Copy-Item C:\\destino\\${BUILD_TAG}\\${file} -Destination ${destination}${file}"
-        }
     }
 
 }
