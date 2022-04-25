@@ -22,10 +22,10 @@ void findFiles(){
         directory = file.path.replaceFirst(/${file.name}/, "")
         println directory
         if(directory != flagDirectory){
-            powershell "New-Item ${destination}${directory} -Type Directory"
+            cmd "md ${destination}${directory}"
         }
         println 'copiando '+file.name
-        powershell "Copy-Item ${workspace}\\${file} -Destination ${destination}${file}"
+        cmd "copy ${workspace}\\${file} ${destination}${file}"
     }
 
 }
