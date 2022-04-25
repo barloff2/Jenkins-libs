@@ -20,8 +20,8 @@ void findFiles(){
     files.each{ file ->
         def flagDirectory = directory
         directory = file.path.replaceFirst(/${file.name}/, "")
-        println directory
         if(directory != flagDirectory){
+            println 'creando carpeta '+ directory
             bat "md ${destination}${directory}"
         }
         println 'copiando '+file.name
