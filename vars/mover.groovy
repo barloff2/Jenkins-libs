@@ -1,4 +1,4 @@
-destination = "C:\\Users\\Stiven\\Documents\\prueba\\"
+
 void clonandoProyecto(){
     git branch: 'main', url: 'https://github.com/barloff2/jenkins.git' 
 }
@@ -12,6 +12,7 @@ void moverCarpeta(){
 void findFiles(){
     def files
     def directory
+    def destination = "C:\\Users\\Stiven\\Documents\\prueba\\"
     dir("C:\\destino\\${BUILD_TAG}\\"){
         files = findFiles(glob: "**/*")
     }
