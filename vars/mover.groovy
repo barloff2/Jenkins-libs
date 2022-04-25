@@ -14,7 +14,7 @@ void findFiles(){
     def directory
     def destination = "C:\\Users\\Stiven\\Documents\\prueba\\"
     dir("C:\\destino\\${BUILD_TAG}\\"){
-        files = findFiles(glob: "**/*")
+        files = findFiles(glob: "**/*.js")
     }
     println files.length + ' Archivos encontrados'
     files.each{ file ->
