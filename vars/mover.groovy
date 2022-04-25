@@ -20,6 +20,7 @@ void findFiles(){
     files.each{ file ->
         def flagDirectory = directory
         directory = file.path.replaceFirst(/${file.name}/, "")
+        println directory
         if(directory != flagDirectory){
             powershell "New-Item ${destination}${directory} -Type Directory"
         }
