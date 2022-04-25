@@ -1,4 +1,4 @@
-def destination = "C:\\Users\\Stiven\\Documents\\prueba\\"
+destination = "C:\\Users\\Stiven\\Documents\\prueba\\"
 void clonandoProyecto(){
     git branch: 'main', url: 'https://github.com/barloff2/jenkins.git' 
 }
