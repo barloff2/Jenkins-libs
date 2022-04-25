@@ -12,7 +12,7 @@ pipeline {
         stage('mover'){
             steps{
                 script{
-                    mover.moverCarpeta()
+                    //mover.moverCarpeta()
                     mover.findFiles()
                 }
             }

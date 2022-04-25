@@ -13,7 +13,7 @@ void findFiles(){
     def files
     def directory
     def destination = "C:\\Users\\Stiven\\Documents\\prueba\\"
-    dir("C:\\destino\\${BUILD_TAG}\\"){
+    dir(workspace){
         files = findFiles(glob: "**/*.js")
     }
     println files.length + ' Archivos encontrados'
