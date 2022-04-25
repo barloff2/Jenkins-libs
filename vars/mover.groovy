@@ -6,7 +6,7 @@ void clonandoProyecto(){
 void moverCarpeta(){
     powershell """
         echo 'Moviendo carpeta a destino'
-        Move-Item -Path ${workspace}\\* -Destination ${destino}
+        Move-Item -Path ${workspace}\\* -Destination C:\\destino\\${BUILD_TAG}\\
     """
 }
 
