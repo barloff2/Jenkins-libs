@@ -20,10 +20,10 @@ void findFiles(){
     files.each{ file ->
         def flagDirectory = directory
         directory = file.path.replaceFirst(/${file.name}/, "")
-        if(directory != flagDirectory){
-            powershell "New-Item ${destination}${directory} -Type Directory"
-        }
         if (file.path.matches(/.*\.js/)){
+            if(directory != flagDirectory){
+                powershell "New-Item ${destination}${directory} -Type Directory"
+            }
             println 'copiando '+file.name
             powershell "Copy-Item C:\\destino\\${BUILD_TAG}\\${file} -Destination ${destination}${file}"
         }
