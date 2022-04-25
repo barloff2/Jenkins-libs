@@ -1,4 +1,3 @@
-String destino = "C:\\destino\\${BUILD_TAG}\\"
 void clonandoProyecto(){
     git branch: 'main', url: 'https://github.com/barloff2/jenkins.git' 
 }
@@ -17,7 +16,8 @@ void findFiles(){
     println files.length + ' Archivos encontrados'
 
     files.each{ file -> 
-        if (file.name != '*.jsp'){
+        println file.path
+        if (file.name != "**.jsp"){
             "Remove-item ${file}"
         }
     }
