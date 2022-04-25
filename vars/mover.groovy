@@ -16,11 +16,11 @@ void findFiles(){
     }
     println files.length + ' Archivos encontrados'
     files.each{ file -> 
-        println 'Imprimiendo .Directory' + file.directory
-        println 'Imprimiendo .path' + file.path
-        println 'Imprimiendo .name' + file.name
-        println 'Imprimiendo file' + file
-        directory = file.replace(file.name, "")
+        println 'Imprimiendo .Directory ' + file.directory
+        println 'Imprimiendo .path ' + file.path
+        println 'Imprimiendo .name ' + file.name
+        println 'Imprimiendo file ' + file
+        directory = file.replace(file.getName, "")
         println 'Imprimiendo Directorio' + directory
         if (!file.path.matches(/.*\.js/)){
             println 'Eliminando '+file.name
