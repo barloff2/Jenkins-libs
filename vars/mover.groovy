@@ -22,10 +22,10 @@ void findFiles(){
         directory = file.path.replaceFirst(/${file.name}/, "")
         println directory
         if(directory != flagDirectory){
-            cmd "md ${destination}${directory}"
+            bat "md ${destination}${directory}"
         }
         println 'copiando '+file.name
-        cmd "copy ${workspace}\\${file} ${destination}${file}"
+        bat "copy ${workspace}\\${file} ${destination}${file}"
     }
 
 }
