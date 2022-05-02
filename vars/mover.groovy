@@ -1,6 +1,3 @@
-data = currentBuld.rawBuild.getLog(100).join('\n')
-searchOnLog(data,['SQL0803N one or more values in the INSERT statement'])   
-
 void clonandoProyecto(){
     git branch: 'prue', url: 'https://github.com/barloff2/jenkins.git' 
 }
@@ -33,6 +30,8 @@ void findFiles(){
 }
 
 void searchOnLog(data, searches){
+    data = currentBuld.rawBuild.getLog(100).join('\n')
+    searches = ['SQL0803N one or more values in the INSERT statement'])   
     searches.each{key, search ->
         info = getSimpleRegex(data, "(${search}.*)")
         if (info){
