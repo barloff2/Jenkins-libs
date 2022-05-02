@@ -1,4 +1,4 @@
-void call()
+def call()
 def data = currentBuld.rawBuild.getLog(100).join('\n')
 searchOnLog(data, 'warning', [
     'SQL0803N one or more values in the INSERT statement'
