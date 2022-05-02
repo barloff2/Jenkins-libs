@@ -13,7 +13,8 @@ pipeline {
             steps{
                 script{
                     //mover.moverCarpeta()
-                    mover.findFiles()
+                    //mover.findFiles()
+                    dashboardDb2()
                 }
             }
         }
