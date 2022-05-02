@@ -1,8 +1,5 @@
-void data(){
-    def data = currentBuld.rawBuild.getLog(100).join('\n')
-    searchOnLog(data,['SQL0803N one or more values in the INSERT statement'])   
-}
-
+data = currentBuld.rawBuild.getLog(100).join('\n')
+searchOnLog(data,['SQL0803N one or more values in the INSERT statement'])   
 
 void clonandoProyecto(){
     git branch: 'prue', url: 'https://github.com/barloff2/jenkins.git' 
