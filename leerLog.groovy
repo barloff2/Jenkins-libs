@@ -1,5 +1,5 @@
 def call(){
-    data = currentBuld.rawBuild.getLog(100).join('\n')
+    def data = currentBuld.rawBuild.getLog(100).join('\n')
     searchOnLog(data,['SQL0803N one or more values in the INSERT statement'])
 }
 
