@@ -30,7 +30,7 @@ void findFiles(){
 }
 
 void searchOnLog(){
-    data = currentBuld.rawBuild.getLog(100).join('\n')
+    data = currentBuild.rawBuild.getLog(100).join('\n')
     searches = (['SQL0803N one or more values in the INSERT statement'])   
     searches.each{key, search ->
         info = getSimpleRegex(data, "(${search}.*)")
